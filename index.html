@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dobunza | Our Memory</title>
+
+    <meta 
+        name="description" 
+        content="Dobunza - A little space that keeps our memories, stories, and beautiful moments together."
+    >
+
+
+    <!-- =========================
+         GOOGLE FONT
+    ========================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="
+    https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap
+    " rel="stylesheet">
+
+
+    <!-- =========================
+         CSS
+    ========================== -->
+
+    <link rel="stylesheet" href="style.css">
+
+
+
+    <meta name="theme-color" content="#19161e">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+</head>
+
+
+<body>
+<script>try{if(localStorage.getItem("dobunza-theme")==="dark"){document.documentElement.dataset.theme="dark";}}catch(e){}</script>
+
+<div class="particles">
+
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+
+<!-- =========================
+     LOADING SCREEN
+========================== -->
+
+<div class="loading-screen">
+
+    <div class="loading-logo">
+        Dobunza
+    </div>
+
+</div>
+
+
+
+<!-- =========================
+     NAVBAR
+========================== -->
+
+<header>
+
+<nav class="navbar">
+
+
+    <div class="logo">
+        Dobunza
+    </div>
+
+
+
+    <ul class="nav-menu">
+
+        <li>
+            <a href="#home">
+                Home
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#story">
+                Our Story
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#gallery">
+                Gallery
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#timeline">
+                Timeline
+            </a>
+        </li>
+
+
+        <li>
+            <a href="game.html">
+                Our Games ♡
+            </a>
+        </li>
+
+
+        <li>
+            <a href="#letter">
+                Letter
+            </a>
+        </li>
+
+
+    </ul>
+
+    <a class="admin-entry" href="admin.html" aria-label="Masuk ke admin Dobunza" title="Masuk ke Admin">
+        <span aria-hidden="true">♙</span>
+        <span>Admin</span>
+    </a>
+
+</nav>
+
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Aktifkan mode malam" aria-pressed="false" title="Ganti tema">
+        <span class="theme-toggle-icon" aria-hidden="true">☾</span>
+    </button>
+
+</header>
+
+
+
+
+<!-- =========================
+     HERO SECTION
+========================== -->
+
+
+<main>
+
+
+<section id="home" class="hero">
+
+
+    <!-- LEFT CONTENT -->
+
+    <div class="hero-content">
+
+
+        <span class="hero-subtitle">
+            Welcome To Our Memory
+        </span>
+
+
+        <h1>
+            Dobunza
+        </h1>
+
+
+        <p>
+            Sebuah ruang kecil yang menyimpan setiap tawa,
+            setiap perjalanan, dan setiap kenangan indah
+            yang telah kita ukir bersama.
+        </p>
+
+
+
+        <a href="#story" class="hero-button">
+
+            Begin Our Journey
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+
+
+        <div class="scroll">
+
+            <span></span>
+
+            <p>
+                Scroll
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <!-- RIGHT PHOTO -->
+
+    <div class="hero-image">
+
+
+        <div class="image-glow"></div>
+
+
+
+        <div class="image-frame">
+
+
+            <img 
+                src="images/foto-utama.jpg" data-dobunza-key="hero"
+                alt="Dobunza Memory"
+            >
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+<!-- =========================
+     RELATIONSHIP COUNTER
+========================== -->
+<section id="love-counter" class="love-counter-section">
+    <div class="love-counter-heading">
+        <span class="love-eyebrow">OUR LOVE STORY</span>
+        <h2>Together Since</h2>
+        <p class="love-start-date">01 December 2024</p>
+    </div>
+
+    <div class="love-stats" aria-label="Lama hubungan">
+        <div class="love-stat"><strong id="love-months">0</strong><span>Months</span></div>
+        <div class="love-stat"><strong id="love-days">0</strong><span>Days</span></div>
+        <div class="love-stat"><strong id="love-hours">00</strong><span>Hours</span></div>
+        <div class="love-stat"><strong id="love-minutes">00</strong><span>Minutes</span></div>
+        <div class="love-stat"><strong id="love-seconds">00</strong><span>Seconds</span></div>
+    </div>
+
+    <div class="anniversary-card">
+        <h3>Next Anniversary</h3>
+        <p id="next-anniversary-date" class="anniversary-date">December 1, 2026</p>
+        <p class="anniversary-countdown"><strong id="anniversary-days-left">—</strong> Days Remaining</p>
+        <p class="anniversary-note">Every year with you is another beautiful chapter ❤️</p>
+    </div>
+</section>
+
+
+<!-- =========================
+     OUR STORY
+========================== -->
+
+
+<section id="story" class="section story">
+
+
+    <div class="section-title">
+
+        <span>
+            Chapter One
+        </span>
+
+
+        <h2>
+            Our Story
+        </h2>
+
+
+    </div>
+
+
+
+    <div class="story-container">
+
+
+
+        <!-- STORY IMAGE -->
+
+        <div class="story-image">
+
+
+            <div class="story-frame">
+
+
+                <img 
+                src="images/story.jpg" data-dobunza-key="story"
+                alt="Our Story Memory">
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <!-- STORY TEXT -->
+
+        <div class="story-content">
+
+
+            <span class="story-date" data-dobunza-text="story-date">
+                The Beginning
+            </span>
+
+
+
+            <h3 data-dobunza-text="story-heading">
+                A Small Moment,
+                A Beautiful Journey
+            </h3>
+
+
+
+            <p data-dobunza-text="story-paragraph-1">
+
+                Semua cerita besar selalu dimulai
+                dari sebuah momen sederhana.
+
+                Dari tawa kecil, percakapan panjang,
+                dan waktu yang perlahan membuat kita
+                semakin mengenal satu sama lain.
+
+            </p>
+
+
+
+            <p data-dobunza-text="story-paragraph-2">
+
+                Dobunza menjadi ruang kecil untuk
+                menyimpan setiap perjalanan,
+                kenangan, dan cerita yang kita
+                bangun bersama.
+
+            </p>
+
+
+
+            <div class="story-quote">
+
+
+                "Every moment with you
+                becomes a memory worth keeping."
+
+
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</section>
+
+
+
+
+
+
+<!-- =========================
+     GALLERY
+========================== -->
+
+
+<section id="gallery" class="section gallery">
+
+
+    <div class="section-title">
+
+        <span>
+            Beautiful Moments
+        </span>
+
+
+        <h2>
+            Gallery
+        </h2>
+
+    </div>
+
+
+
+
+    <div class="gallery-grid">
+
+
+        <div class="gallery-item">
+
+            <img 
+            src="images/gallery/photo1.jpg" data-dobunza-key="gallery-1"
+            alt="Memory 1">
+
+            <div class="gallery-overlay">
+                Our Moment
+            </div>
+
+        </div>
+
+
+
+        <div class="gallery-item">
+
+            <img 
+            src="images/gallery/photo2.jpg" data-dobunza-key="gallery-2"
+            alt="Memory 2">
+
+            <div class="gallery-overlay">
+                Little Happiness
+            </div>
+
+        </div>
+
+
+
+
+        <div class="gallery-item">
+
+            <img 
+            src="images/gallery/photo3.jpg" data-dobunza-key="gallery-3"
+            alt="Memory 3">
+
+            <div class="gallery-overlay">
+                Beautiful Day
+            </div>
+
+        </div>
+
+
+
+
+        <div class="gallery-item">
+
+            <img 
+            src="images/gallery/photo4.jpg" data-dobunza-key="gallery-4"
+            alt="Memory 4">
+
+            <div class="gallery-overlay">
+                Together
+            </div>
+
+        </div>
+
+
+
+
+        <div class="gallery-item">
+
+            <img 
+            src="images/gallery/photo5.jpg" data-dobunza-key="gallery-5"
+            alt="Memory 5">
+
+            <div class="gallery-overlay">
+                Forever Memory
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+
+<!-- =========================
+     TIMELINE
+========================== -->
+
+
+<section id="timeline" class="section timeline">
+
+
+    <div class="section-title">
+
+        <span>
+            Our Journey
+        </span>
+
+
+        <h2>
+            Timeline
+        </h2>
+
+    </div>
+
+
+
+    <div class="timeline-container">
+
+
+        <!-- ITEM 1 -->
+
+        <div class="timeline-item">
+
+
+            <div class="timeline-dot"></div>
+
+
+            <div class="timeline-content">
+
+
+                <span data-dobunza-text="timeline-1-label">
+                    First Chapter
+                </span>
+
+
+                <h3 data-dobunza-text="timeline-1-title">
+                    Where It Started
+                </h3>
+
+
+                <p data-dobunza-text="timeline-1-description">
+
+                    Sebuah awal sederhana yang
+                    tanpa kita sadari menjadi
+                    cerita yang sangat berarti.
+
+                </p>
+
+
+            </div>
+
+
+            <div class="timeline-image">
+
+
+                <img 
+                src="images/timeline/time1.jpg" data-dobunza-key="timeline-1"
+                alt="First Moment">
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <!-- ITEM 2 -->
+
+
+        <div class="timeline-item">
+
+
+            <div class="timeline-dot"></div>
+
+
+            <div class="timeline-content">
+
+
+                <span data-dobunza-text="timeline-2-label">
+                    Beautiful Days
+                </span>
+
+
+                <h3 data-dobunza-text="timeline-2-title">
+                    Growing Together
+                </h3>
+
+
+                <p data-dobunza-text="timeline-2-description">
+
+                    Hari demi hari membuat kita
+                    semakin mengenal, memahami,
+                    dan menghargai satu sama lain.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="timeline-image">
+
+
+                <img 
+                src="images/timeline/time2.jpg" data-dobunza-key="timeline-2"
+                alt="Together">
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <!-- ITEM 3 -->
+
+
+        <div class="timeline-item">
+
+
+            <div class="timeline-dot"></div>
+
+
+            <div class="timeline-content">
+
+
+                <span data-dobunza-text="timeline-3-label">
+                    Precious Memory
+                </span>
+
+
+                <h3 data-dobunza-text="timeline-3-title">
+                    Moments We Keep
+                </h3>
+
+
+                <p data-dobunza-text="timeline-3-description">
+
+                    Setiap foto, tawa, dan
+                    perjalanan menjadi bagian
+                    dari cerita kita.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="timeline-image">
+
+
+                <img 
+                src="images/timeline/time3.jpg" data-dobunza-key="timeline-3"
+                alt="Memory">
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <!-- ITEM 4 -->
+
+
+        <div class="timeline-item">
+
+
+            <div class="timeline-dot"></div>
+
+
+            <div class="timeline-content">
+
+
+                <span data-dobunza-text="timeline-4-label">
+                    Today
+                </span>
+
+
+                <h3 data-dobunza-text="timeline-4-title">
+                    Still Choosing You
+                </h3>
+
+
+                <p data-dobunza-text="timeline-4-description">
+
+                    Dan perjalanan ini masih
+                    terus berjalan dengan
+                    banyak cerita baru.
+
+                </p>
+
+
+            </div>
+
+
+
+            <div class="timeline-image">
+
+
+                <img 
+                src="images/timeline/time4.jpg" data-dobunza-key="timeline-4"
+                alt="Today">
+
+
+            </div>
+
+
+        </div>
+
+
+
+    </div>
+
+
+</section>
+
+
+
+
+
+
+<!-- =========================
+     LOVE LETTER
+========================== -->
+
+
+<section id="letter" class="section letter">
+
+
+    <div class="section-title">
+
+        <span>
+            From My Heart
+        </span>
+
+
+        <h2>
+            Love Letter
+        </h2>
+
+
+    </div>
+
+
+
+
+    <div class="letter-container">
+
+
+        <div class="letter-paper">
+
+
+
+            <div class="letter-top">
+
+                For You,
+
+            </div>
+
+
+
+            <div class="letter-content">
+
+
+                <p>
+
+                Dear you,
+
+                </p>
+
+
+
+                <p>
+
+                Terima kasih sudah menjadi bagian
+                dari perjalanan kecil yang begitu
+                berarti ini.
+
+                Terima kasih untuk setiap tawa,
+                setiap dukungan, dan setiap momen
+                sederhana yang membuat hari-hari
+                terasa lebih indah.
+
+                </p>
+
+
+
+
+                <p>
+
+                Aku tidak tahu bagaimana cerita
+                ini akan berjalan ke depan,
+                tetapi aku berharap kita selalu
+                bisa menikmati setiap prosesnya
+                bersama.
+
+                </p>
+
+
+
+
+                <p>
+
+                Karena pada akhirnya,
+                beberapa orang hadir bukan hanya
+                untuk menjadi kenangan,
+                tetapi menjadi rumah.
+
+                </p>
+
+
+
+                <p class="signature">
+
+                With love,
+
+                <br>
+
+                Ridho
+
+                </p>
+
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+
+</main>
+
+
+
+
+
+<!-- =========================
+     MUSIC
+========================== -->
+
+<!-- =========================
+     MUSIC SECTION
+========================== -->
+
+
+<section class="music-section">
+
+
+    <div class="music-card">
+
+
+        <div class="music-icon">
+
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+
+        </div>
+
+
+
+        <div class="music-text">
+
+
+            <span>
+                Our Song
+            </span>
+
+
+            <h3 id="music-title">
+                A Little Memory
+            </h3>
+
+
+        </div>
+</div>
+
+
+</section>
+
+
+<!-- Floating music control: kept outside transformed/backdrop-filter containers -->
+<button id="music-button" class="floating-music-button" type="button" aria-label="Putar musik" aria-pressed="false">
+    <span class="play-icon" aria-hidden="true">▶</span>
+</button>
+
+<audio 
+id="background-music"
+loop
+>
+
+    <source 
+        src="music/music.mp3"
+        type="audio/mp3"
+    >
+
+</audio>
+
+
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================== -->
+
+<div class="cursor-glow"></div>
+<script src="script.js"></script>
+<script src="photo-store.js"></script>
+<script src="content-store.js"></script>
+<script src="settings-store.js"></script>
+
+
+
+
+<script>
+if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js").catch((error) => {
+      console.error("Dobunza PWA service worker registration failed:", error);
+    });
+  });
+}
+</script>
+
+</body>
+
+</html>

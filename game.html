@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fcf8f5">
+  <title>Our Little Adventure | Dobunza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="game.css">
+
+    <meta name="theme-color" content="#19161e">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="index.html"><span class="brand-heart">♥</span> Dobunza</a><a class="back-link" href="index.html">← Kembali ke kenangan</a></header>
+  <main class="page">
+    <section class="intro"><div class="eyebrow">A LITTLE GAME FOR TWO HEARTS</div><h1>Our Little <em>Adventure</em></h1><p>Lari sejauh mungkin, hindari rintangan, kumpulkan 12 hati, dan capai garis finis. 💗</p></section>
+    <section class="connection panel">
+      <div class="connection-head"><div><span class="status-dot" id="status-dot"></span><strong id="connection-status">Belum terhubung</strong><p id="connection-help">Buat room untuk bermain online, atau pilih Main Sendiri.</p></div><div class="players"><span class="player-chip"><i class="p1"></i> Ridho</span><span class="player-chip"><i class="p2"></i> Bunga</span></div></div>
+      <div class="room-controls"><button id="create-room" class="btn btn-primary">♡ Buat Room</button><button id="play-solo" class="btn btn-light">Main Sendiri ♡</button><div class="join-group"><input id="room-code" maxlength="8" autocomplete="off" placeholder="Kode room" aria-label="Kode room"><button id="join-room" class="btn btn-light">Gabung</button></div><button id="copy-code" class="btn btn-light" disabled>Salin kode</button></div>
+      <div class="room-code-display" id="room-display" hidden>KODE ROOM <strong id="room-value"></strong><span>Bagikan kode ini kepada pasanganmu.</span></div>
+      <div class="connection-note">Mode online menggunakan koneksi internet dan layanan koneksi PeerJS. Kedua pemain perlu membuka halaman game ini di perangkat masing-masing.</div>
+    </section>
+    <section class="game-panel panel">
+      <div class="game-topline"><div><span class="tiny-label">LEVEL 01</span><h2>Meadow of Hearts</h2></div><div class="score-box"><span>Hati terkumpul</span><strong><b id="score">0</b><small> / 12</small></strong></div></div>
+      <div class="canvas-wrap"><canvas id="game-canvas" width="960" height="480" aria-label="Game petualangan dua pemain"></canvas><div class="canvas-message" id="canvas-message"><div class="message-heart">♡</div><strong>Petualangan menunggu kalian</strong><span>Pilih Main Sendiri untuk berlari, melompati rintangan, mengumpulkan hati, dan mencapai finis.</span></div><div class="win-overlay" id="win-overlay" hidden><div class="win-card"><div>💖 ✨ 💖</div><h2>Kita berhasil!</h2><p>Semua hati sudah terkumpul. Momen kecil, kenangan besar.</p><button class="btn btn-primary" id="play-again">Main lagi</button></div></div></div>
+      <div class="game-footer"><span>✦ Cari hati yang berkilau di padang bunga</span><span id="peer-count">Siap bermain sendiri atau online</span></div>
+    </section>
+    <section class="howto-grid"><article class="panel howto"><div class="howto-icon">⌨</div><div><h3>Kontrol laptop</h3><p>Tekan <kbd>SPACE</kbd> atau <kbd>↑</kbd> untuk melompat. Hindari semak, kristal, jamur, dan tunggul kayu. Jika menabrak, kamu gagal!</p></div></article><article class="panel howto"><div class="howto-icon">☝</div><div><h3>Kontrol HP</h3><p>Tekan tombol <b>LOMPAT</b> saat rintangan mendekat. Kumpulkan 12 hati dan capai gerbang FINISH. Paling nyaman dalam mode lanskap.</p></div></article></section>
+    <div class="touch-controls" aria-label="Kontrol game untuk layar sentuh"><button data-dir="up" aria-label="Atas">↑</button><div><button data-dir="left" aria-label="Kiri">←</button><button data-dir="down" aria-label="Bawah">↓</button><button data-dir="right" aria-label="Kanan">→</button></div><button id="jump-button" class="jump-button" aria-label="Lompat">↟ <span>LOMPAT</span></button></div>
+    <p class="footnote">Game ini merupakan fitur tambahan dan tidak mengubah galeri, cerita, musik, atau dashboard admin Dobunza. Untuk koneksi online, browser harus dapat mengakses internet.</p>
+  </main>
+  <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script><script src="game.js"></script>
+
+<script>
+if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js").catch((error) => {
+      console.error("Dobunza PWA service worker registration failed:", error);
+    });
+  });
+}
+</script>
+
+</body></html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#FCF8F5">
+  <title>Admin Dashboard | Dobunza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+  <style>
+    .dashboard-page{padding:28px 22px 50px}.dashboard-shell{max-width:1120px}.dashboard-top{position:sticky;top:0;z-index:100;padding:12px 0 18px;border-bottom:1px solid #EEDFE4;background:rgba(252,248,245,.94);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}.dashboard-brand{display:flex;align-items:center;gap:11px}.brand-symbol{display:grid;place-items:center;width:42px;height:42px;border-radius:14px;background:#F9EAF0;font-size:24px}.dashboard-top-right{display:flex;align-items:center;gap:10px}.status-pill{display:inline-flex;align-items:center;gap:7px;padding:8px 11px;border-radius:30px;background:#F3F0F4;color:#786D76;font-size:10px;font-weight:700}.status-dot{width:7px;height:7px;border-radius:50%;background:#78A58B}.dashboard-layout{display:grid;grid-template-columns:225px minmax(0,1fr);gap:24px;margin-top:25px}.dashboard-sidebar{position:sticky;top:94px;align-self:start;max-height:calc(100vh - 112px);overflow-y:auto;padding:17px 12px;border:1px solid #F0E2E6;border-radius:20px;background:rgba(255,255,255,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}.sidebar-label{margin:5px 11px 12px;color:#B2A1A7;font-size:9px;font-weight:800;letter-spacing:2px}.side-link{display:flex;align-items:center;gap:11px;width:100%;padding:12px 11px;border:0;border-radius:11px;background:transparent;color:#7B7070;text-align:left;font-size:12px;font-weight:700;text-decoration:none}.side-link.active{background:#F9EAF0;color:#A9637D;box-shadow:inset 3px 0 0 #C78CA0}.side-link.active .side-icon{background:#F2DDE5;color:#A9637D}.side-link:hover{background:#FCF3F6;color:#A9637D;transition:background .2s ease,color .2s ease}.side-link:focus-visible{outline:2px solid #C78CA0;outline-offset:2px}.dashboard-main [id]{scroll-margin-top:112px}.side-icon{display:grid;place-items:center;width:25px;height:25px;border-radius:8px;background:rgba(255,255,255,.8);font-size:14px}.sidebar-help{margin:25px 3px 2px;padding:14px;border-radius:13px;background:#FBF5F7;color:#85757B;font-size:11px;line-height:1.8}.dashboard-main{min-width:0}.welcome-panel{position:relative;overflow:hidden;padding:30px 32px;border:1px solid rgba(199,140,160,.2);border-radius:22px;background:linear-gradient(115deg,rgba(255,255,255,.94),rgba(251,239,244,.9));box-shadow:0 14px 42px rgba(104,70,83,.05)}.welcome-panel:after{content:'♡';position:absolute;right:24px;top:-26px;color:rgba(199,140,160,.13);font-family:Georgia,serif;font-size:180px;pointer-events:none}.welcome-panel .eyebrow{text-align:left}.welcome-panel h1{position:relative;z-index:1;margin:0;font-family:'Cormorant Garamond',serif;font-size:clamp(35px,4vw,49px);font-weight:500;line-height:1.1}.welcome-panel h1 em{color:var(--primary)}.welcome-panel p:not(.eyebrow){position:relative;z-index:1;max-width:520px;margin:12px 0 0;color:var(--soft-text);font-size:12px;line-height:1.9}.section-heading{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:27px 0 14px}.section-heading h2{margin:0;font-size:15px}.section-heading p{margin:5px 0 0;color:#A09196;font-size:11px}.mini-label{color:#AD8796;font-size:10px;font-weight:800;letter-spacing:1px}.stats-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.stat-card{padding:18px;border:1px solid #F0E2E6;border-radius:16px;background:rgba(255,255,255,.76)}.stat-top{display:flex;align-items:center;justify-content:space-between;gap:8px;color:#8D7C83;font-size:11px}.stat-icon{display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:#F9EAF0;font-size:16px}.stat-number{margin-top:13px;font-family:'Cormorant Garamond',serif;font-size:33px;line-height:1;color:#5C4C53}.stat-note{margin-top:7px;color:#AA9BA0;font-size:10px;line-height:1.5}.manager-card{padding:21px;border:1px solid #F0E2E6;border-radius:18px;background:rgba(255,255,255,.78)}.manager-row{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid #F3E9EC}.manager-row:first-child{padding-top:0}.manager-row:last-child{padding-bottom:0;border-bottom:0}.manager-icon{display:grid;place-items:center;flex:0 0 42px;height:42px;border-radius:13px;background:#F9EAF0;font-size:19px}.manager-copy{min-width:0;flex:1}.manager-copy strong{display:block;font-size:12px}.manager-copy span{display:block;margin-top:4px;color:#96878D;font-size:10px;line-height:1.6}.coming-soon{white-space:nowrap;padding:6px 8px;border-radius:7px;background:#F5F0F2;color:#998A90;font-size:9px;font-weight:800}.bottom-note{margin-top:17px;padding:13px 15px;border-left:3px solid #D9A7B8;border-radius:0 10px 10px 0;background:#FBF5F7;color:#897982;font-size:11px;line-height:1.8}.dashboard-home-link{font-size:12px}.secondary-button{display:inline-flex;align-items:center;gap:8px}@media(max-width:760px){.dashboard-layout{grid-template-columns:1fr}.dashboard-sidebar{position:sticky;top:72px;z-index:90;display:flex;gap:5px;max-height:none;overflow-x:auto;overflow-y:hidden;padding:8px;background:rgba(252,248,245,.96);box-shadow:0 8px 20px rgba(104,70,83,.06)}.sidebar-label,.sidebar-help{display:none}.side-link{justify-content:center;min-width:max-content;width:auto;padding:9px}.side-link .side-icon{display:none}.stats-grid{grid-template-columns:1fr}.stat-card{display:flex;align-items:center;gap:14px}.stat-number{margin:0 0 0 auto}.stat-note{max-width:125px}.welcome-panel{padding:25px 22px}.dashboard-top{align-items:flex-start}.status-pill{display:none}}@media(max-width:420px){.dashboard-page{padding:17px 12px 35px}.dashboard-brand{font-size:25px}.secondary-button{padding:9px 10px;font-size:10px}.manager-row{align-items:flex-start;flex-wrap:wrap}.coming-soon{margin-left:56px}}
+
+    .photo-manager-panel{padding:20px;border:1px solid #F0E2E6;border-radius:18px;background:rgba(255,255,255,.78)}.manager-toolbar,.extra-gallery-panel{display:flex;align-items:center;justify-content:space-between;gap:14px}.manager-toolbar strong,.extra-gallery-panel strong{font-size:13px}.manager-toolbar p,.extra-gallery-panel p{margin:5px 0 0;color:#96878D;font-size:10px;line-height:1.7}.storage-badge{padding:7px 9px;border-radius:20px;background:#F2F6F1;color:#64856C;font-size:9px;font-weight:800;white-space:nowrap}.photo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}.photo-card{overflow:hidden;border:1px solid #F0E2E6;border-radius:14px;background:#FFFCFD}.photo-preview{display:block;width:100%;height:155px;object-fit:cover;background:linear-gradient(135deg,#F9EAF0,#F4EEF7)}.photo-preview.empty{object-fit:contain;padding:30px;color:#A38D97}.photo-card-body{padding:12px}.photo-card-title{display:block;font-size:11px;font-weight:800}.photo-card-subtitle{display:block;margin-top:4px;color:#9D8D93;font-size:9px;line-height:1.6}.photo-card-actions{display:flex;align-items:center;gap:7px;margin-top:11px;flex-wrap:wrap}.upload-button,.save-photo-button,.reset-photo-button,.remove-extra-button{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:9px 11px;border:1px solid #E8CCD5;border-radius:9px;background:#FFF;color:#A9637D;font-size:10px;font-weight:800;cursor:pointer}.save-photo-button{border-color:#C78CA0;background:#C78CA0;color:white}.save-photo-button:disabled{opacity:.4;cursor:not-allowed}.reset-photo-button,.remove-extra-button{border-color:#EDE4E7;color:#897B81}.photo-card input[type=file]{display:none}.photo-card-note{min-height:13px;margin-top:8px;color:#6D9276;font-size:9px}.extra-gallery-panel{margin-top:22px;padding-top:19px;border-top:1px solid #F1E6E9}.extra-gallery-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:12px}.extra-gallery-card{min-width:0;padding:8px;border:1px solid #F0E2E6;border-radius:11px}.extra-gallery-card img{width:100%;height:86px;object-fit:cover;border-radius:7px;background:#F9EAF0}.extra-gallery-card span{display:block;overflow:hidden;margin:6px 0;color:#897B81;font-size:9px;text-overflow:ellipsis;white-space:nowrap}.photo-status{margin:15px 0 0;color:#96878D;font-size:10px;line-height:1.8}.photo-status.error{color:#B5475A}.photo-status.success{color:#427B62}@media(max-width:520px){.photo-manager-panel{padding:13px}.photo-grid{grid-template-columns:1fr}.photo-preview{height:190px}.manager-toolbar,.extra-gallery-panel{align-items:flex-start;flex-direction:column}.extra-gallery-list{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+
+    .content-editor-panel{padding:20px;border:1px solid #F0E2E6;border-radius:18px;background:rgba(255,255,255,.82)}.editor-intro{margin:0 0 18px;color:#96878D;font-size:11px;line-height:1.8}.editor-group{padding:17px 0;border-top:1px solid #F1E6E9}.editor-group:first-of-type{border-top:0;padding-top:0}.editor-group h3{margin:0 0 13px;font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:#5C4C53}.editor-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.editor-field{display:flex;flex-direction:column;gap:6px;min-width:0}.editor-field.full{grid-column:1/-1}.editor-field label{color:#8A737D;font-size:10px;font-weight:800}.editor-field input,.editor-field textarea{width:100%;box-sizing:border-box;padding:11px 12px;border:1px solid #EAD9E0;border-radius:10px;background:#FFFCFD;color:#514646;font:12px Manrope,sans-serif;outline:none}.editor-field input:focus,.editor-field textarea:focus{border-color:#C78CA0;box-shadow:0 0 0 3px rgba(199,140,160,.12)}.editor-field textarea{min-height:94px;resize:vertical;line-height:1.7}.editor-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:18px}.editor-save{padding:11px 16px;border:1px solid #C78CA0;border-radius:10px;background:#C78CA0;color:white;font:800 11px Manrope,sans-serif;cursor:pointer}.editor-reset{padding:11px 14px;border:1px solid #EAD9E0;border-radius:10px;background:#fff;color:#897B81;font:800 11px Manrope,sans-serif;cursor:pointer}.editor-status{margin:12px 0 0;color:#96878D;font-size:10px;line-height:1.8}.editor-status.success{color:#427B62}.editor-status.error{color:#B5475A}@media(max-width:520px){.content-editor-panel{padding:13px}.editor-fields{grid-template-columns:1fr}.editor-field.full{grid-column:auto}}
+
+  </style>
+
+    <meta name="theme-color" content="#19161e">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192.png">
+
+</head>
+<body>
+  <main class="dashboard-page">
+    <div class="dashboard-shell">
+      <header class="dashboard-top">
+        <div class="dashboard-brand"><span class="brand-symbol">♡</span><span>Dobunza <span style="color:#B5A5AA;font-size:12px;font-family:Manrope,sans-serif;font-weight:600">/ Admin</span></span></div>
+        <div class="dashboard-top-right"><span class="status-pill"><span class="status-dot"></span> Ruang pribadi</span><button id="logoutButton" class="secondary-button" type="button">Keluar <span aria-hidden="true">↗</span></button></div>
+      </header>
+      <div class="dashboard-layout">
+        <aside class="dashboard-sidebar">
+          <p class="sidebar-label">MENU UTAMA</p>
+          <a class="side-link active" href="admin-dashboard.html"><span class="side-icon">⌂</span> Ringkasan</a>
+          <a class="side-link" href="#photo-manager"><span class="side-icon">▧</span> Kelola foto</a>
+          <a class="side-link" href="#story-editor"><span class="side-icon">✎</span> Edit cerita &amp; timeline</a>
+          <a class="side-link" href="#music-editor"><span class="side-icon">♫</span> Kelola musik</a>
+          <a class="side-link" href="#relationship-editor"><span class="side-icon">♡</span> Tanggal hubungan</a>
+          <a class="side-link" href="index.html"><span class="side-icon">♡</span> Lihat website</a>
+          <div class="sidebar-help"><strong>Little reminder ♡</strong><br>Setiap foto menyimpan cerita. Kelola kenangan kalian dari satu tempat.</div>
+        </aside>
+        <section class="dashboard-main">
+          <div class="welcome-panel">
+            <p class="eyebrow">YOUR PRIVATE MEMORY SPACE</p>
+            <h1>Welcome to your <em>little world.</em></h1>
+            <p>Halo! Ini ruang khusus untuk mengelola website kenangan Dobunza. Kamu sekarang bisa mengganti foto website dan menambahkan foto galeri dari panel ini tanpa mengedit HTML.</p>
+          </div>
+          <div class="section-heading"><div><h2>Ringkasan website</h2><p>Gambaran bagian kenangan yang akan dikelola.</p></div><span class="mini-label">DOBUNZA OVERVIEW</span></div>
+          <div class="stats-grid">
+            <article class="stat-card"><div><div class="stat-top"><span>Foto utama</span><span class="stat-icon">✧</span></div><div class="stat-note">Foto pembuka di halaman utama</div></div><div class="stat-number" id="heroStat">01</div></article>
+            <article class="stat-card"><div><div class="stat-top"><span>Galeri kenangan</span><span class="stat-icon">▧</span></div><div class="stat-note">Koleksi foto bersama</div></div><div class="stat-number" id="galleryStat">05</div></article>
+            <article class="stat-card"><div><div class="stat-top"><span>Timeline</span><span class="stat-icon">♡</span></div><div class="stat-note">Foto di perjalanan cerita</div></div><div class="stat-number" id="timelineStat">04</div></article>
+          </div>
+          <div class="section-heading" id="photo-manager"><div><h2>Kelola foto kenangan</h2><p>Pilih foto baru untuk mengganti foto di website, atau tambahkan foto galeri.</p></div><span class="mini-label">PHOTO STUDIO</span></div>
+          <div class="photo-manager-panel">
+            <div class="manager-toolbar"><div><strong>Foto website</strong><p>Tekan “Pilih foto” untuk melihat pratinjau, lalu simpan perubahan.</p></div><span class="storage-badge">Tersimpan di browser ini</span></div>
+            <div id="photoGrid" class="photo-grid" aria-live="polite"></div>
+            <div class="extra-gallery-panel"><div><strong>Tambah foto ke Gallery</strong><p>Foto baru akan muncul setelah lima foto galeri yang sudah ada.</p></div><label class="upload-button" for="extraGalleryInput">＋ Pilih foto</label><input id="extraGalleryInput" type="file" accept="image/*" multiple hidden></div>
+            <div id="extraGalleryList" class="extra-gallery-list"></div>
+            <p id="photoStatus" class="photo-status" role="status">Foto yang diunggah disimpan di browser ini menggunakan IndexedDB.</p>
+          </div>
+          <div class="section-heading" id="story-editor"><div><h2>Edit cerita &amp; timeline</h2><p>Ubah teks kenangan tanpa perlu mengedit file HTML.</p></div><span class="mini-label">MEMORY EDITOR</span></div>
+          <div class="content-editor-panel">
+            <p class="editor-intro">Isi bagian yang ingin kamu ubah, lalu tekan <strong>Simpan perubahan</strong>. Perubahan disimpan di browser ini dan akan tampil di website saat halaman dimuat ulang menggunakan Live Server yang sama.</p>
+            <form id="memoryEditorForm">
+              <section class="editor-group"><h3>Our Story</h3><div class="editor-fields">
+                <div class="editor-field"><label for="story-date">Label kecil</label><input id="story-date" data-content-key="story-date" maxlength="100" required></div>
+                <div class="editor-field"><label for="story-heading">Judul cerita</label><input id="story-heading" data-content-key="story-heading" maxlength="180" required></div>
+                <div class="editor-field full"><label for="story-paragraph-1">Paragraf pertama</label><textarea id="story-paragraph-1" data-content-key="story-paragraph-1" maxlength="1500" required></textarea></div>
+                <div class="editor-field full"><label for="story-paragraph-2">Paragraf kedua</label><textarea id="story-paragraph-2" data-content-key="story-paragraph-2" maxlength="1500" required></textarea></div>
+              </div></section>
+              <section class="editor-group"><h3>Timeline · 4 momen</h3><div class="editor-fields">
+                <div class="editor-field"><label for="timeline-1-label">Momen 1 · Label</label><input id="timeline-1-label" data-content-key="timeline-1-label" maxlength="100" required></div>
+                <div class="editor-field"><label for="timeline-1-title">Momen 1 · Judul</label><input id="timeline-1-title" data-content-key="timeline-1-title" maxlength="180" required></div>
+                <div class="editor-field full"><label for="timeline-1-description">Momen 1 · Cerita</label><textarea id="timeline-1-description" data-content-key="timeline-1-description" maxlength="1500" required></textarea></div>
+                <div class="editor-field"><label for="timeline-2-label">Momen 2 · Label</label><input id="timeline-2-label" data-content-key="timeline-2-label" maxlength="100" required></div>
+                <div class="editor-field"><label for="timeline-2-title">Momen 2 · Judul</label><input id="timeline-2-title" data-content-key="timeline-2-title" maxlength="180" required></div>
+                <div class="editor-field full"><label for="timeline-2-description">Momen 2 · Cerita</label><textarea id="timeline-2-description" data-content-key="timeline-2-description" maxlength="1500" required></textarea></div>
+                <div class="editor-field"><label for="timeline-3-label">Momen 3 · Label</label><input id="timeline-3-label" data-content-key="timeline-3-label" maxlength="100" required></div>
+                <div class="editor-field"><label for="timeline-3-title">Momen 3 · Judul</label><input id="timeline-3-title" data-content-key="timeline-3-title" maxlength="180" required></div>
+                <div class="editor-field full"><label for="timeline-3-description">Momen 3 · Cerita</label><textarea id="timeline-3-description" data-content-key="timeline-3-description" maxlength="1500" required></textarea></div>
+                <div class="editor-field"><label for="timeline-4-label">Momen 4 · Label</label><input id="timeline-4-label" data-content-key="timeline-4-label" maxlength="100" required></div>
+                <div class="editor-field"><label for="timeline-4-title">Momen 4 · Judul</label><input id="timeline-4-title" data-content-key="timeline-4-title" maxlength="180" required></div>
+                <div class="editor-field full"><label for="timeline-4-description">Momen 4 · Cerita</label><textarea id="timeline-4-description" data-content-key="timeline-4-description" maxlength="1500" required></textarea></div>
+              </div></section>
+              <div class="editor-actions"><button class="editor-save" type="submit">♡ Simpan perubahan</button><button class="editor-reset" id="resetMemoryEditor" type="button">Kembalikan teks awal</button></div>
+              <p id="memoryEditorStatus" class="editor-status" role="status">Perubahan teks tersimpan di browser yang sama dengan dashboard.</p>
+            </form>
+          </div>
+          <div class="section-heading" id="music-editor"><div><h2>Kelola musik romantis</h2><p>Atur judul lagu dan unggah file musik latar untuk website.</p></div><span class="mini-label">OUR SONG</span></div>
+          <div class="content-editor-panel">
+            <form id="musicEditorForm">
+              <div class="editor-fields">
+                <div class="editor-field full"><label for="musicTitleInput">Judul lagu</label><input id="musicTitleInput" maxlength="120" placeholder="Contoh: A Little Memory" required></div>
+                <div class="editor-field full"><label for="musicFileInput">File musik (MP3, OGG, atau WAV)</label><input id="musicFileInput" type="file" accept="audio/*"><span class="photo-card-subtitle" id="musicFileNote">Belum ada file baru dipilih. Musik asli akan tetap digunakan sampai kamu menyimpan file baru.</span></div>
+              </div>
+              <div class="editor-actions"><button class="editor-save" type="submit">♫ Simpan musik</button><button class="editor-reset" id="resetMusicButton" type="button">Gunakan musik asli</button></div>
+              <p id="musicEditorStatus" class="editor-status" role="status">File musik tersimpan secara lokal di browser ini.</p>
+            </form>
+          </div>
+          <div class="section-heading" id="relationship-editor"><div><h2>Tanggal hubungan</h2><p>Atur tanggal mulai hubungan untuk penghitung waktu dan hari jadi berikutnya.</p></div><span class="mini-label">OUR TIME TOGETHER</span></div>
+          <div class="content-editor-panel">
+            <form id="relationshipForm">
+              <div class="editor-fields"><div class="editor-field"><label for="relationshipStartDate">Tanggal mulai hubungan</label><input id="relationshipStartDate" type="date" value="2023-12-01" required></div></div>
+              <div class="editor-actions"><button class="editor-save" type="submit">♡ Simpan tanggal</button><button class="editor-reset" id="resetRelationshipButton" type="button">Kembalikan 1 Desember 2023</button></div>
+              <p id="relationshipStatus" class="editor-status" role="status">Tanggal awal saat ini: 1 Desember 2023.</p>
+            </form>
+          </div>
+          <div class="bottom-note"><strong>Perlu diketahui:</strong> teks, musik, tanggal, dan foto tersimpan di browser dan alamat Live Server yang sama. Jika dibuka di browser/perangkat lain, perubahan tidak otomatis ikut. Simpan salinan file musik dan teks penting sebagai cadangan.</div>
+          <p style="margin-top:20px"><a class="dashboard-home-link" href="index.html">← Kembali melihat website Dobunza</a></p>
+        </section>
+      </div>
+    </div>
+  </main>
+  <script>if (localStorage.getItem("dobunzaAdminLoggedIn") !== "true") { window.location.replace(new URL("admin.html", window.location.href).href); }</script>
+
+  <script>
+  (() => {
+    'use strict';
+    const DB_NAME='dobunza-local-media', STORE='photos';
+    const slots=[
+      {key:'hero',title:'Foto utama (Hero)',description:'Foto besar di bagian pembuka website.',path:'images/foto-utama.jpg'},
+      {key:'story',title:'Foto Our Story',description:'Foto yang menemani bagian cerita kalian.',path:'images/story.jpg'},
+      {key:'gallery-1',title:'Gallery · Foto 1',description:'Slot foto galeri pertama.',path:'images/gallery/photo1.jpg'},
+      {key:'gallery-2',title:'Gallery · Foto 2',description:'Slot foto galeri kedua.',path:'images/gallery/photo2.jpg'},
+      {key:'gallery-3',title:'Gallery · Foto 3',description:'Slot foto galeri ketiga.',path:'images/gallery/photo3.jpg'},
+      {key:'gallery-4',title:'Gallery · Foto 4',description:'Slot foto galeri keempat.',path:'images/gallery/photo4.jpg'},
+      {key:'gallery-5',title:'Gallery · Foto 5',description:'Slot foto galeri kelima.',path:'images/gallery/photo5.jpg'},
+      {key:'timeline-1',title:'Timeline · Momen 1',description:'Foto untuk momen pertama.',path:'images/timeline/time1.jpg'},
+      {key:'timeline-2',title:'Timeline · Momen 2',description:'Foto untuk momen kedua.',path:'images/timeline/time2.jpg'},
+      {key:'timeline-3',title:'Timeline · Momen 3',description:'Foto untuk momen ketiga.',path:'images/timeline/time3.jpg'},
+      {key:'timeline-4',title:'Timeline · Momen 4',description:'Foto untuk momen keempat.',path:'images/timeline/time4.jpg'}
+    ];
+    const grid=document.getElementById('photoGrid'), status=document.getElementById('photoStatus'), extraInput=document.getElementById('extraGalleryInput'), extraList=document.getElementById('extraGalleryList');
+    const previews=new Map();
+    function openDB(){return new Promise((resolve,reject)=>{const req=indexedDB.open(DB_NAME,1);req.onupgradeneeded=()=>{if(!req.result.objectStoreNames.contains(STORE))req.result.createObjectStore(STORE,{keyPath:'key'});};req.onsuccess=()=>resolve(req.result);req.onerror=()=>reject(req.error);});}
+    async function allRecords(){const db=await openDB();return new Promise((resolve,reject)=>{const req=db.transaction(STORE,'readonly').objectStore(STORE).getAll();req.onsuccess=()=>{db.close();resolve(req.result||[])};req.onerror=()=>{db.close();reject(req.error)};});}
+    async function put(record){const db=await openDB();return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,'readwrite');tx.objectStore(STORE).put(record);tx.oncomplete=()=>{db.close();resolve()};tx.onerror=()=>{db.close();reject(tx.error)};});}
+    async function remove(key){const db=await openDB();return new Promise((resolve,reject)=>{const tx=db.transaction(STORE,'readwrite');tx.objectStore(STORE).delete(key);tx.oncomplete=()=>{db.close();resolve()};tx.onerror=()=>{db.close();reject(tx.error)};});}
+    function say(message,type=''){status.textContent=message;status.className='photo-status'+(type?' '+type:'');}
+    function urlFor(blob){return URL.createObjectURL(blob)}
+    function revokePreview(key){if(previews.has(key)){URL.revokeObjectURL(previews.get(key));previews.delete(key)}}
+    function renderCard(slot,record){
+      const card=document.createElement('article');card.className='photo-card';
+      const img=document.createElement('img');img.className='photo-preview';img.alt=slot.title;
+      if(record&&record.blob){img.src=urlFor(record.blob);previews.set('saved:'+slot.key,img.src)}else{img.src=slot.path;img.onerror=()=>{img.onerror=null;img.classList.add('empty');img.src='';img.alt='Foto belum tersedia di folder';};}
+      const body=document.createElement('div');body.className='photo-card-body';
+      const title=document.createElement('strong');title.className='photo-card-title';title.textContent=slot.title;
+      const desc=document.createElement('span');desc.className='photo-card-subtitle';desc.textContent=slot.description;
+      const file=document.createElement('input');file.type='file';file.accept='image/*';file.id='file-'+slot.key;
+      const pick=document.createElement('label');pick.className='upload-button';pick.htmlFor=file.id;pick.textContent='Pilih foto';
+      const save=document.createElement('button');save.className='save-photo-button';save.type='button';save.textContent='Simpan';save.disabled=true;
+      const reset=document.createElement('button');reset.className='reset-photo-button';reset.type='button';reset.textContent='Hapus perubahan';reset.disabled=!(record&&record.blob);
+      const note=document.createElement('div');note.className='photo-card-note';note.textContent=record&&record.blob?'Foto pengganti tersimpan':'Menggunakan foto dari folder website';
+      let selected=null, tempUrl=null;
+      file.addEventListener('change',()=>{const f=file.files&&file.files[0];if(!f)return;if(!f.type.startsWith('image/')){say('Pilih file gambar seperti JPG, PNG, atau WebP.','error');return;}if(f.size>15*1024*1024){say('Ukuran gambar maksimal 15 MB.','error');file.value='';return;}selected=f;save.disabled=false;if(tempUrl)URL.revokeObjectURL(tempUrl);tempUrl=urlFor(f);img.src=tempUrl;img.classList.remove('empty');note.textContent='Pratinjau siap · '+(f.size/1024/1024).toFixed(2)+' MB';say('Pratinjau '+slot.title+' siap. Tekan Simpan untuk menerapkan.');});
+      save.addEventListener('click',async()=>{if(!selected)return;save.disabled=true;try{await put({key:slot.key,blob:selected,name:selected.name,updatedAt:Date.now()});if(record&&record.blob)revokePreview('saved:'+slot.key);say(slot.title+' berhasil disimpan. Buka atau muat ulang website untuk melihatnya.','success');note.textContent='Foto pengganti tersimpan';reset.disabled=false;selected=null;file.value='';}catch(e){say('Gagal menyimpan foto. Coba gambar yang lebih kecil atau gunakan Live Server.','error');save.disabled=false;}});
+      reset.addEventListener('click',async()=>{if(!confirm('Kembalikan '+slot.title+' ke foto asli dari folder website?'))return;try{await remove(slot.key);revokePreview('saved:'+slot.key);if(tempUrl)URL.revokeObjectURL(tempUrl);selected=null;await render();say(slot.title+' kembali menggunakan foto asli.','success');}catch(e){say('Tidak bisa menghapus perubahan foto.','error');}});
+      const actions=document.createElement('div');actions.className='photo-card-actions';actions.append(pick,save,reset);body.append(title,desc,actions,file,note);card.append(img,body);return card;
+    }
+    async function render(){const records=await allRecords();const map=new Map(records.map(r=>[r.key,r]));grid.innerHTML='';slots.forEach(slot=>grid.appendChild(renderCard(slot,map.get(slot.key))));const extras=records.filter(r=>r.key.startsWith('gallery-extra-')).sort((a,b)=>a.key.localeCompare(b.key));document.getElementById('heroStat').textContent=map.has('hero')?'01':'01';document.getElementById('galleryStat').textContent=String(5+extras.length).padStart(2,'0');document.getElementById('timelineStat').textContent='04';extraList.innerHTML='';if(!extras.length){const empty=document.createElement('p');empty.className='photo-card-subtitle';empty.textContent='Belum ada foto tambahan.';extraList.appendChild(empty);}extras.forEach(record=>{const card=document.createElement('div');card.className='extra-gallery-card';const img=document.createElement('img');img.src=urlFor(record.blob);img.alt=record.name||'Foto galeri';const label=document.createElement('span');label.textContent=record.name||'Foto tambahan';const del=document.createElement('button');del.type='button';del.className='remove-extra-button';del.textContent='Hapus';del.addEventListener('click',async()=>{if(!confirm('Hapus foto tambahan ini dari galeri?'))return;await remove(record.key);await render();say('Foto tambahan dihapus dari galeri.','success');});card.append(img,label,del);extraList.appendChild(card);});}
+    extraInput.addEventListener('change',async()=>{const files=Array.from(extraInput.files||[]);if(!files.length)return;const tooBig=files.find(f=>!f.type.startsWith('image/')||f.size>15*1024*1024);if(tooBig){say('Semua file harus berupa gambar dan maksimal 15 MB per foto.','error');extraInput.value='';return;}try{const existing=(await allRecords()).filter(r=>r.key.startsWith('gallery-extra-'));for(let i=0;i<files.length;i++){const f=files[i];await put({key:'gallery-extra-'+Date.now()+'-'+i,blob:f,name:f.name,caption:f.name.replace(/\.[^.]+$/,'').replace(/[-_]/g,' '),updatedAt:Date.now()});}extraInput.value='';await render();say(files.length+' foto berhasil ditambahkan ke Gallery.','success');}catch(e){say('Gagal menambahkan foto. Pastikan halaman dibuka melalui Live Server.','error');}});
+    const memoryDefaults={
+      'story-date':'The Beginning','story-heading':'A Small Moment, A Beautiful Journey',
+      'story-paragraph-1':'Semua cerita besar selalu dimulai dari sebuah momen sederhana. Dari tawa kecil, percakapan panjang, dan waktu yang perlahan membuat kita semakin mengenal satu sama lain.',
+      'story-paragraph-2':'Dobunza menjadi ruang kecil untuk menyimpan setiap perjalanan, kenangan, dan cerita yang kita bangun bersama.',
+      'timeline-1-label':'First Chapter','timeline-1-title':'Where It Started','timeline-1-description':'Sebuah awal sederhana yang tanpa kita sadari menjadi cerita yang sangat berarti.',
+      'timeline-2-label':'Beautiful Days','timeline-2-title':'Growing Together','timeline-2-description':'Hari demi hari membuat kita semakin mengenal, memahami, dan menghargai satu sama lain.',
+      'timeline-3-label':'Precious Memory','timeline-3-title':'Moments We Keep','timeline-3-description':'Setiap foto, tawa, dan perjalanan menjadi bagian dari cerita kita.',
+      'timeline-4-label':'Today','timeline-4-title':'Still Choosing You','timeline-4-description':'Dan perjalanan ini masih terus berjalan dengan banyak cerita baru.'
+    };
+    const memoryForm=document.getElementById('memoryEditorForm');
+    const memoryStatus=document.getElementById('memoryEditorStatus');
+    function memorySay(message,type=''){memoryStatus.textContent=message;memoryStatus.className='editor-status'+(type?' '+type:'');}
+    async function loadMemoryFields(){const records=await allRecords();const map=new Map(records.map(r=>[r.key,r]));memoryForm.querySelectorAll('[data-content-key]').forEach(field=>{const key='content:'+field.dataset.contentKey;const record=map.get(key);field.value=record&&typeof record.value==='string'?record.value:memoryDefaults[field.dataset.contentKey]||'';});}
+    memoryForm.addEventListener('submit',async event=>{event.preventDefault();if(!memoryForm.reportValidity())return;const fields=Array.from(memoryForm.querySelectorAll('[data-content-key]'));try{for(const field of fields){await put({key:'content:'+field.dataset.contentKey,value:field.value.trim(),updatedAt:Date.now()});}memorySay('Cerita dan timeline berhasil disimpan. Muat ulang website untuk melihat perubahan.','success');}catch(error){console.error(error);memorySay('Gagal menyimpan teks. Pastikan halaman dibuka melalui Live Server.','error');}});
+    document.getElementById('resetMemoryEditor').addEventListener('click',async()=>{if(!confirm('Kembalikan semua teks cerita dan timeline ke teks awal?'))return;try{for(const key of Object.keys(memoryDefaults))await remove('content:'+key);await loadMemoryFields();memorySay('Teks awal berhasil dipulihkan.','success');}catch(error){console.error(error);memorySay('Teks awal tidak dapat dipulihkan.','error');}});
+    loadMemoryFields().catch(error=>{console.error(error);memorySay('Teks belum dapat dimuat. Jalankan dashboard melalui Live Server.','error');});
+    // Music settings: audio file stored as a Blob in the same IndexedDB used for photos.
+    const musicForm=document.getElementById('musicEditorForm'), musicTitleInput=document.getElementById('musicTitleInput'), musicFileInput=document.getElementById('musicFileInput'), musicFileNote=document.getElementById('musicFileNote'), musicStatus=document.getElementById('musicEditorStatus');
+    function musicSay(message,type=''){musicStatus.textContent=message;musicStatus.className='editor-status'+(type?' '+type:'');}
+    musicTitleInput.value=localStorage.getItem('dobunzaMusicTitle')||'A Little Memory';
+    musicFileInput.addEventListener('change',()=>{const file=musicFileInput.files&&musicFileInput.files[0];if(!file)return;if(!file.type.startsWith('audio/')){musicSay('Pilih file audio yang valid.','error');musicFileInput.value='';return;}if(file.size>25*1024*1024){musicSay('Ukuran musik maksimal 25 MB.','error');musicFileInput.value='';return;}musicFileNote.textContent='File terpilih: '+file.name+' · '+(file.size/1024/1024).toFixed(2)+' MB';});
+    musicForm.addEventListener('submit',async event=>{event.preventDefault();if(!musicForm.reportValidity())return;const file=musicFileInput.files&&musicFileInput.files[0];try{localStorage.setItem('dobunzaMusicTitle',musicTitleInput.value.trim());if(file){if(!file.type.startsWith('audio/')||file.size>25*1024*1024)throw new Error('File audio tidak valid atau melebihi 25 MB.');await put({key:'settings:music',blob:file,name:file.name,updatedAt:Date.now()});musicFileNote.textContent='Musik tersimpan: '+file.name;}musicSay('Pengaturan musik tersimpan. Muat ulang website untuk menerapkan perubahan.','success');}catch(error){console.error(error);musicSay('Musik gagal disimpan. Pastikan memakai Live Server dan file maksimal 25 MB.','error');}});
+    document.getElementById('resetMusicButton').addEventListener('click',async()=>{if(!confirm('Hapus musik pengganti dan gunakan file music/music.mp3 dari folder website?'))return;try{await remove('settings:music');localStorage.removeItem('dobunzaMusicTitle');musicTitleInput.value='A Little Memory';musicFileInput.value='';musicFileNote.textContent='Menggunakan musik asli dari folder website.';musicSay('Musik asli akan digunakan setelah website dimuat ulang.','success');}catch(error){musicSay('Pengaturan musik tidak dapat direset.','error');}});
+    // Relationship date is a simple ISO date in localStorage; the site counter reads it.
+    const relationshipForm=document.getElementById('relationshipForm'), relationshipInput=document.getElementById('relationshipStartDate'), relationshipStatus=document.getElementById('relationshipStatus');
+    const defaultRelationshipDate='2023-12-01';
+    relationshipInput.value=localStorage.getItem('dobunzaRelationshipStartDate')||defaultRelationshipDate;
+    function relationshipSay(message,type=''){relationshipStatus.textContent=message;relationshipStatus.className='editor-status'+(type?' '+type:'');}
+    relationshipForm.addEventListener('submit',event=>{event.preventDefault();if(!relationshipForm.reportValidity())return;const chosen=relationshipInput.value;if(!chosen)return;const parsed=new Date(chosen+'T00:00:00');if(Number.isNaN(parsed.getTime())||parsed>new Date()){relationshipSay('Pilih tanggal yang valid dan tidak melebihi hari ini.','error');return;}localStorage.setItem('dobunzaRelationshipStartDate',chosen);relationshipSay('Tanggal hubungan tersimpan. Muat ulang website untuk melihat penghitung waktu yang diperbarui.','success');});
+    document.getElementById('resetRelationshipButton').addEventListener('click',()=>{if(!confirm('Kembalikan tanggal hubungan ke 1 Desember 2023?'))return;localStorage.removeItem('dobunzaRelationshipStartDate');relationshipInput.value=defaultRelationshipDate;relationshipSay('Tanggal awal dikembalikan ke 1 Desember 2023.','success');});
+    document.getElementById('logoutButton').addEventListener('click',function(){localStorage.removeItem('dobunzaAdminLoggedIn');window.location.href=new URL('admin.html',window.location.href).href;});
+    render().catch(e=>{say('Penyimpanan foto tidak bisa dibuka. Jalankan admin.html melalui Live Server, bukan file://.','error');console.error(e);});
+  })();
+  </script>
+  <script>
+    // Tandai menu yang sedang dipilih, dan ikuti bagian yang terlihat saat halaman discroll.
+    (() => {
+      const links = Array.from(document.querySelectorAll('.dashboard-sidebar .side-link'));
+      const sectionLinks = links.filter(link => link.getAttribute('href')?.startsWith('#'));
+      const sections = sectionLinks.map(link => document.getElementById(link.getAttribute('href').slice(1))).filter(Boolean);
+      const homeLink = links.find(link => link.getAttribute('href') === 'admin-dashboard.html');
+      function setActive(link) {
+        links.forEach(item => {
+          const active = item === link;
+          item.classList.toggle('active', active);
+          if (active) item.setAttribute('aria-current', 'page');
+          else item.removeAttribute('aria-current');
+        });
+      }
+      sectionLinks.forEach(link => link.addEventListener('click', () => setActive(link)));
+      if ('IntersectionObserver' in window && sections.length) {
+        const observer = new IntersectionObserver(entries => {
+          const visible = entries.filter(entry => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+          if (visible) {
+            const matching = sectionLinks.find(link => link.getAttribute('href') === '#' + visible.target.id);
+            if (matching) setActive(matching);
+          }
+        }, { rootMargin: '-18% 0px -62% 0px', threshold: [0, 0.1, 0.25, 0.5] });
+        sections.forEach(section => observer.observe(section));
+      }
+      window.addEventListener('scroll', () => {
+        if (window.scrollY < 100 && homeLink) setActive(homeLink);
+      }, { passive: true });
+      const hashLink = sectionLinks.find(link => link.getAttribute('href') === window.location.hash);
+      if (hashLink) setActive(hashLink);
+      else if (homeLink) setActive(homeLink);
+    })();
+  </script>
+
+
+<script>
+if ("serviceWorker" in navigator && (location.protocol === "https:" || location.hostname === "localhost" || location.hostname === "127.0.0.1")) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./service-worker.js").catch((error) => {
+      console.error("Dobunza PWA service worker registration failed:", error);
+    });
+  });
+}
+</script>
+
+</body>
+</html>
